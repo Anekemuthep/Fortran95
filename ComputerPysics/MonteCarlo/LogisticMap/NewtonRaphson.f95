@@ -11,8 +11,11 @@ program NewtonRaphson
     print *, 'iter      x         error  '
     print *, 0, x0, err
     do i=1, NMAX
+!--------- Value of the function g(x) :
         g  = x0 * tan(x0)-sqrt(rho*rho-x0*x0)
-        gp = x0 - g/gp
+!--------- Value of the derivative g'(x):
+        gp = x0 /sqrt(rho*rho-x0*x0) + x0/(cos(x0)**2)+tan(x0)
+        x1 = x0 - g/gp
         err = ABS(x1-x0)
         print *, i, x1, err
         if(err .lt. eps) exit
