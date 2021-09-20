@@ -2,7 +2,7 @@ program NewtonRaphson
     implicit none
     real(8), parameter :: rho = 15.0D0
     real(8), parameter :: eps = 1D-6
-    integer, parameter :: NMAX =m 1000
+    integer, parameter :: NMAX = 1000
     real(8) :: x0, x1, err, g, gp
     integer :: i
     print *, 'Enter x0: '
