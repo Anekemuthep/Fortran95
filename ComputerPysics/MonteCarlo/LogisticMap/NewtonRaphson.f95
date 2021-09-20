@@ -8,7 +8,8 @@ program NewtonRaphson
     print *, 'Enter x0: '
     read *, x0
     err = 1.0D0
-    print *, 'iter      x         error  '
+    print *, 'iter                   x                                error  '
+    print *, '_______________________________________________________________'
     print *, 0, x0, err
     do i=1, NMAX
 !--------- Value of the function g(x) :
